@@ -5,9 +5,6 @@ import { vipList } from '~/vip';
 const route = useRoute()
 const vipName = route.params.vip[0] ?? ''
 
-console.log(route.params.vip[0])
-console.log({isVip: vipList.includes(route.params.vip[0])})
-
 definePageMeta({
   theme: 'vip',
   middleware: [
@@ -32,7 +29,7 @@ definePageMeta({
 
     <template #header>
       <header class="flex flex-col-reverse">
-          <h1 class="font-display font-semibold text-5xl md:text-6xl">Norah's Birthday Sleepover</h1>
+          <h1 class="font-display font-semibold text-5xl md:text-6xl">Norah's Birthday Party & Sleepover</h1>
           <p class="uppercase text-base font-semibold tracking-wider">You've been selected for</p>
         </header>
     </template>
