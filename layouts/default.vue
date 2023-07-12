@@ -22,6 +22,15 @@ const $theme = computed(() => {
 
   return t[theme]
 })
+
+const $rsvpLink = computed(() => {
+  const l = {
+    standard: 'https://aygh4go1ws9.typeform.com/to/HCTMgT3P',
+    vip: 'https://aygh4go1ws9.typeform.com/to/IqlqTuWs'
+  }
+
+  return l[theme]
+})
 </script>
 
 <template>
@@ -65,9 +74,9 @@ const $theme = computed(() => {
             RSVP by July 22
           </p>
 
-          <a href="https://aygh4go1ws9.typeform.com/to/HCTMgT3P"
+          <a :href="$rsvpLink"
             class="w-full hover:animate-pulse hover:scale-105 duration-200 text-2xl font-semibold bg-white ring-transparent hover:opacity-90 focus:ring-4 outline-none inline-flex items-center justify-center rounded-lg py-4 px-6"
-            :class="[$theme.text, $theme.focusRingDarker]">RSVP Now</a>
+            :class="[$theme.text, $theme.focusRingDarker]">RSVP Now </a>
 
         </div>
 
