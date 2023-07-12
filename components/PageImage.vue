@@ -2,7 +2,7 @@
 defineProps<{
   image: string
   alt: string
-  useBlendMode: boolean
+  useBlendMode?: boolean
 }>()
 </script>
 

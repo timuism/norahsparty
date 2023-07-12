@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts'
   ],
   tailwindcss: {
-    // configPath: 'tailwind.config.ts'
+    configPath: 'tailwind.config.ts',
+    exposeConfig: true,
   },
   googleFonts: {
     families: {
@@ -15,6 +16,18 @@ export default defineNuxtConfig({
         ital: [400, 500]
       }
     }
+  },
+  build: {
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+       cssnano:
+         process.env.NODE_ENV === 'production'
+           ? { preset: ['default', { discardComments: { removeAll: true } }] }
+           : false, // disable cssnano when not in production
+      },
+   }
   },
   devtools: { enabled: true }
 })
