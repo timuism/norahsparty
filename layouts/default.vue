@@ -60,14 +60,15 @@ const $theme = computed(() => {
           </div>
         </div>
 
-        <div class="flex flex-col md:flex-row space-x-8 w-full rounded-lg mt-8 md:mt-0">
+        <div class="flex flex-col items-start space-y-4 w-full rounded-lg mt-8 md:mt-0">
+          <p class="text-base uppercase font-semibold tracking-wider">
+            RSVP by July 22
+          </p>
+
           <a href="https://aygh4go1ws9.typeform.com/to/HCTMgT3P"
             class="w-full hover:animate-pulse hover:scale-105 duration-200 text-2xl font-semibold bg-white ring-transparent hover:opacity-90 focus:ring-4 outline-none inline-flex items-center justify-center rounded-lg py-4 px-6"
-            :class="[$theme.text, $theme.focusRingDarker]">RSVP</a>
+            :class="[$theme.text, $theme.focusRingDarker]">RSVP Now</a>
 
-            <p class="grow w-3/4 hidden">
-              For questions reach out to Norah's parents
-            </p>
         </div>
 
         <footer class="mt-8 italic">

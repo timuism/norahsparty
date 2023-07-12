@@ -24,7 +24,7 @@ definePageMeta({
     </template>
 
     <template #description>
-      <p>Join us in celebrating Norah’s birthday with a cookout, cake, ice cream and cats!</p>
+      <p>Join us in celebrating Norah’s birthday with food, cake, ice cream and cat ears!</p>
     </template>
     
   </NuxtLayout>
