@@ -16,7 +16,7 @@ definePageMeta({
   ]
 })
 
-$vipName = computed(() => {
+const $vipName = computed(() => {
   const vipName = route.params.vip[0]
   return vipName === 'jade-and-justice' ? 'Jade and Justice' : vipName
 })
@@ -29,7 +29,7 @@ $vipName = computed(() => {
     </template>
 
     <template #vipName>
-      {{ route.params.vip[0] }}
+      {{ $vipName }}
     </template>
 
     <template #header>
