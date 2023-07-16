@@ -15,6 +15,11 @@ definePageMeta({
     }
   ]
 })
+
+$vipName = computed(() => {
+  const vipName = route.params.vip[0]
+  return vipName === 'jade-and-justice' ? 'Jade and Justice' : vipName
+})
 </script>
 
 <template>
