@@ -112,7 +112,7 @@ const $theme = computed(() => {
             </div>
           </div>
 
-          <address class="font-display text-3xl md:text-4xl pb-2">
+          <address class="font-display text-2xl md:text-3xl pb-2">
             <p v-for="(line, index) in partyAddressArray"
               :key="index">
               {{ line }}
