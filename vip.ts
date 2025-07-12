@@ -1,3 +1,3 @@
 export const vipList = [
-  'norah', 'aliyah', 'ariel', 'rihlah', 'bella', 'cali', 'jade-and-justice', 'kehlani'
+  'Elijah', 'AJ', 'Amor', 'Rihlah', 'Leiori', 'Leila', 'KJ', 'Camilla', 'Kassidy', 'Melo', 'Baby Elijah'
 ]
