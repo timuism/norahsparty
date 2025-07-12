@@ -3,8 +3,10 @@
 const route = useRoute()
 const theme = route.meta.theme
 
-const partyAddress = ref('1205 Ramblewood Road, Baltimore, MD, 21239')
-const { text, copy, copied, isSupported } = useClipboard({ partyAddress })
+const partyAddressString = ref('23 W Aylesbury Rd, Timonium, MD 21093')
+const partyAddressArray = ['SkyZone Timonium', '23 W Aylesbury Rd', 'Timonium MD, 21093']
+const googleMapsLink = 'https://maps.app.goo.gl/RCMm1SgwTbgBUxd86'
+const { text, copy, copied, isSupported } = useClipboard({ partyAddressString })
 
 const $theme = computed(() => {
   const t = {
@@ -56,28 +58,29 @@ const $rsvpLink = computed(() => {
         <slot name="header" />
 
         <div class="md:flex md:space-x-6 md:py-12">
-          <dl class="flex space-x-12 justify-start w-full py-12 md:py-0 md:flex-col md:space-x-0 md:space-y-6">
+          <dl class="text-2xl flex space-x-12 justify-start w-full py-12 md:py-0 md:flex-col md:space-x-0 md:space-y-6">
             <PartyDetail dt="When">
-              <p>July 29</p>
+              <p>July 27</p>
               <p>
                 <slot name="time" />
               </p>
             </PartyDetail>
 
             <PartyDetail dt="Where">
-              <p>Deja's House</p>
+              <p>SkyZone Timonium</p>
+              <a class="underline text-standard-accent hover:text-standard-accent/80" href="https://www.skyzone.com/timonium/">View site</a>
             </PartyDetail>
           </dl>
 
-          <div class="font-display text-3xl md:text-4xl">
+          <div class="font-body text-xl md:text-2xl">
             <slot name="description" />
           </div>
         </div>
 
         <div class="flex flex-col items-start space-y-4 w-full rounded-lg mt-8 md:mt-0">
           <div class="flex items-center justify-between w-full border-b-2 border-white pb-2">
-            <p class="text-base uppercase font-semibold tracking-wider">
-              Deja's Address
+            <p class="text-lg text-white/30 uppercase font-semibold tracking-wider">
+              Location Details
             </p>
 
             <div v-if="isSupported">
@@ -89,22 +92,18 @@ const $rsvpLink = computed(() => {
           </div>
 
             <address class="font-display text-3xl md:text-4xl pb-2">
-                <p class="whitespace-nowrap">1205 Ramblewood Road</p>
-                <p class="whitespace-nowrap">Baltimore, MD, 21239</p>
+                <p v-for="(line, index) in partyAddressArray" :key="index">
+                  {{ line }}
+                </p>
             </address>
 
-          <a href="https://goo.gl/maps/BmVSjbZ7mbiSc2u76"
+          <a :href="googleMapsLink"
             target="_blank"
             class="w-full hover:animate-pulse hover:scale-105 duration-200 text-2xl font-semibold bg-white ring-transparent hover:opacity-90 focus:ring-4 outline-none inline-flex items-center justify-center rounded-lg py-4 px-6"
             :class="[$theme.text, $theme.focusRingDarker]"
           >Get Directions</a>
       </div>
 
-        <footer class="mt-8 italic hidden">
-          <p>
-            <small><sup>*</sup>Exact address will be given closer to party date</small>
-          </p>
-        </footer>
     </div>
   </article>
 </main>

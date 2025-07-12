@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Caveat: [400, 600],
+     'Michroma': [400],
       'DM Sans': {
         wght: [400, 500, 700],
         ital: [400, 500]

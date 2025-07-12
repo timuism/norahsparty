@@ -23,7 +23,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      'display': ['Caveat', 'sans-serif'],
+      'display': ['Michroma', 'sans-serif'],
       'body': ["'DM Sans'", 'sans-serif']
     },
     extend: {},

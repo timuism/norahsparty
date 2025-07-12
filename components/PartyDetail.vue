@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div class="uppercase tracking-wider">
-    <dt class=" font-semibold">
+    <dt class="text-white/30 text-lg font-semibold">
       {{ dt }}
     </dt>
     <dd>
